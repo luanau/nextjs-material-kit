@@ -25,7 +25,7 @@ import PageChange from "components/PageChange/PageChange.js";
 
 import "assets/scss/nextjs-material-kit.scss?v=1.1.0";
 
-Router.events.on("routeChangeStart", url => {
+Router.events.on("routeChangeStart", (url) => {
   console.log(`Loading: ${url}`);
   document.body.classList.add("body-page-transition");
   ReactDOM.render(
@@ -78,6 +78,12 @@ export default class MyApp extends App {
     return (
       <React.Fragment>
         <Head>
+          <meta charSet="utf-8" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+          />
+          <meta name="theme-color" content="#000000" />
           <title>NextJS Material Kit by Creative Tim</title>
         </Head>
         <Component {...pageProps} />
